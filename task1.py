@@ -20,13 +20,13 @@ def github_respond(user_input):
 
 # Main function to run the chatbot for GitHub
 def github_chatbot():
-    print("Welcome to the GitHub Chatbot!")
-    print("You can ask me anything about GitHub. Type 'exit' to end the conversation.")
+    print("Welcome to the GitHub Chatbot")
+    print("You are free to ask me anything about GitHub. Type 'exit' to end the conversation.")
 
     while True:
         user_input = input("You: ")
         if user_input.lower() == 'exit':
-            print("Goodbye! Have a great day!")
+            print("Goodbye, Have a great day!")
             break
         else:
             print("Bot:", github_respond(user_input))
