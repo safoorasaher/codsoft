@@ -105,7 +105,7 @@ def play_game():
                         if square not in game.available_moves():
                             raise ValueError
                     except ValueError:
-                        print("Invalid move. Please try again.")
+                        print("invalid input, Please try again.")
                 game.make_move(square, letter)
                 game.print_board()  # Print the updated board after the player's move
 
@@ -119,12 +119,12 @@ def play_game():
                 game.print_board()  # Print the updated board after the AI's move
 
             if game.current_winner:
-                print(f"{game.current_winner} wins!")
+                print(f"{game.current_winner} wins!!")
                 break  # Exit the inner loop when the game ends
 
             letter = 'O' if letter == 'X' else 'X'  # Switch player
 
-        if not input("Play again? (y/n): ").lower().startswith('y'):
+        if not input("want to Play again? (y/n): ").lower().startswith('y'):
             break  # Exit the outer loop if the user doesn't want to play again
 
 if __name__ == "__main__":
